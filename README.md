@@ -4,7 +4,8 @@ The first game `Pong` was developped by Atari in 1972.
 
 ![](pong.png)
 
-[Usage](#usage) - [How to play](#how-to-play) - [Features](#features) - [License](#license)
+[Usage](#usage) - [How to play](#how-to-play) - [Features](#features) -
+[License](#license)
 
 ## Usage
 
@@ -13,10 +14,20 @@ Clone the project and work with the source or directly `go install`.
 ### Git clone
 
 ```bash
+# Need to install some library dependencies libGL, libglvnd, mesa, libX11, etc ...
 $ git clone https://github.com/joakim-ribier/pong
 $ go build -o . ./...
 
 $ ./pong
+```
+
+With
+[nix package manager](https://devops.jesuislibre.org/onboarding/nix-direnv-just/#nix)
+
+```bash
+nix develop
+just build
+just run
 ```
 
 ### Go Install
@@ -29,9 +40,11 @@ $ ./pong
 
 ### Binaries
 
-Available only for windows from [Releases](https://github.com/joakim-ribier/pong/releases).
+Available only for windows from
+[Releases](https://github.com/joakim-ribier/pong/releases).
 
-For the others distributions: [Is_it_possible_to_cross-compile_an_application_with_Ebitengine](https://ebitengine.org/en/documents/faq.html#Is_it_possible_to_cross-compile_an_application_with_Ebitengine?)
+For the others distributions:
+[Is_it_possible_to_cross-compile_an_application_with_Ebitengine](https://ebitengine.org/en/documents/faq.html#Is_it_possible_to_cross-compile_an_application_with_Ebitengine?)
 
 ## How to play
 
@@ -46,9 +59,11 @@ $ ./pong
 
 We should have a server which host the game and a client to play with.
 
-The server should start before the client and It's it which handle the whole game.
+The server should start before the client and It's it which handle the whole
+game.
 
 #### How to start the server
+
 ```bash
 $ ./pong --server 127.0.0.1:3000
 ```
@@ -69,10 +84,14 @@ $ ./pong --client 127.0.0.1:3000
 
 Create a `Pong` game with [`ebitengine`](https://ebitengine.org/) 2D engine.
 
-* [x] Implement a singleplayer mode (`Player L` VS `Player R`)
-* [x] Implement a multiplayer mode (`Server` VS `Client`) with the `[UDP]` protocol to exchange messages between the server and the client
-* [x] Add Github workflows to generate binaries
+- [x] Implement a singleplayer mode (`Player L` VS `Player R`)
+- [x] Implement a multiplayer mode (`Server` VS `Client`) with the `[UDP]`
+      protocol to exchange messages between the server and the client
+- [x] Add Github workflows to generate binaries
 
 ## License
 
-This software is licensed under the MIT license, see [License](https://github.com/joakim-ribier/pong/blob/main/LICENSE) for more information.
+This software is licensed under the MIT license, see
+[License](https://github.com/joakim-ribier/pong/blob/main/LICENSE) for more
+information.
+
